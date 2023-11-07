@@ -8,7 +8,7 @@ bp = Blueprint('question', __name__, url_prefix='/question')
 @bp.route('/list/')
 def _list():
   question_list = Question.query.order_by(Question.create_date.desc())
-  return render_template('map.html', question_list=question_list)
+  return render_template('index.html', question_list=question_list)
 
 
 
